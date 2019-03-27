@@ -1,0 +1,417 @@
+"Constituency","Party","Sex","Average age"
+"Helsinki constituency","KOK","Men",47.6
+"Helsinki constituency","KOK","Women",49.4
+"Helsinki constituency","SDP","Men",48.0
+"Helsinki constituency","SDP","Women",46.1
+"Helsinki constituency","PS","Men",46.9
+"Helsinki constituency","PS","Women",43.1
+"Helsinki constituency","KESK","Men",44.0
+"Helsinki constituency","KESK","Women",46.8
+"Helsinki constituency","VAS","Men",40.3
+"Helsinki constituency","VAS","Women",37.0
+"Helsinki constituency","VIHR","Men",41.8
+"Helsinki constituency","VIHR","Women",40.5
+"Helsinki constituency","RKP","Men",39.7
+"Helsinki constituency","RKP","Women",42.3
+"Helsinki constituency","KD","Men",42.8
+"Helsinki constituency","KD","Women",47.1
+"Helsinki constituency","STP","Men",57.4
+"Helsinki constituency","STP","Women",59.7
+"Helsinki constituency","IP","Men",44.5
+"Helsinki constituency","IP","Women",48.1
+"Helsinki constituency","Change2011","Men",62.0
+"Helsinki constituency","Change2011","Women",51.0
+"Helsinki constituency","KA","Men",-
+"Helsinki constituency","KA","Women",73.0
+"Helsinki constituency","Pirate Pty","Men",33.0
+"Helsinki constituency","Pirate Pty","Women",35.7
+"Helsinki constituency","SKP","Men",48.3
+"Helsinki constituency","SKP","Women",51.0
+"Helsinki constituency","KTP","Men",67.5
+"Helsinki constituency","KTP","Women",61.0
+"Helsinki constituency","Others","Men",49.7
+"Helsinki constituency","Others","Women",51.0
+"Uusimaa constituency","KOK","Men",47.0
+"Uusimaa constituency","KOK","Women",43.6
+"Uusimaa constituency","SDP","Men",45.3
+"Uusimaa constituency","SDP","Women",44.9
+"Uusimaa constituency","PS","Men",49.3
+"Uusimaa constituency","PS","Women",45.2
+"Uusimaa constituency","KESK","Men",48.8
+"Uusimaa constituency","KESK","Women",46.7
+"Uusimaa constituency","VAS","Men",41.9
+"Uusimaa constituency","VAS","Women",41.8
+"Uusimaa constituency","VIHR","Men",39.9
+"Uusimaa constituency","VIHR","Women",38.9
+"Uusimaa constituency","RKP","Men",44.0
+"Uusimaa constituency","RKP","Women",42.1
+"Uusimaa constituency","KD","Men",53.1
+"Uusimaa constituency","KD","Women",52.1
+"Uusimaa constituency","STP","Men",56.7
+"Uusimaa constituency","STP","Women",-
+"Uusimaa constituency","IP","Men",48.9
+"Uusimaa constituency","IP","Women",47.5
+"Uusimaa constituency","Change2011","Men",47.2
+"Uusimaa constituency","Change2011","Women",56.7
+"Uusimaa constituency","KA","Men",-
+"Uusimaa constituency","KA","Women",59.3
+"Uusimaa constituency","Pirate Pty","Men",33.8
+"Uusimaa constituency","Pirate Pty","Women",27.3
+"Uusimaa constituency","SKP","Men",60.3
+"Uusimaa constituency","SKP","Women",56.0
+"Uusimaa constituency","KTP","Men",68.3
+"Uusimaa constituency","KTP","Women",66.0
+"Uusimaa constituency","Others","Men",32.0
+"Uusimaa constituency","Others","Women",-
+"Varsinais-Suomi constituency","KOK","Men",46.1
+"Varsinais-Suomi constituency","KOK","Women",37.4
+"Varsinais-Suomi constituency","SDP","Men",46.1
+"Varsinais-Suomi constituency","SDP","Women",42.8
+"Varsinais-Suomi constituency","PS","Men",43.9
+"Varsinais-Suomi constituency","PS","Women",40.7
+"Varsinais-Suomi constituency","KESK","Men",51.6
+"Varsinais-Suomi constituency","KESK","Women",44.1
+"Varsinais-Suomi constituency","VAS","Men",40.9
+"Varsinais-Suomi constituency","VAS","Women",42.0
+"Varsinais-Suomi constituency","VIHR","Men",35.9
+"Varsinais-Suomi constituency","VIHR","Women",37.1
+"Varsinais-Suomi constituency","RKP","Men",47.0
+"Varsinais-Suomi constituency","RKP","Women",26.0
+"Varsinais-Suomi constituency","KD","Men",54.6
+"Varsinais-Suomi constituency","KD","Women",42.7
+"Varsinais-Suomi constituency","STP","Men",56.3
+"Varsinais-Suomi constituency","STP","Women",62.0
+"Varsinais-Suomi constituency","IP","Men",46.4
+"Varsinais-Suomi constituency","IP","Women",63.5
+"Varsinais-Suomi constituency","Change2011","Men",25.0
+"Varsinais-Suomi constituency","Change2011","Women",34.0
+"Varsinais-Suomi constituency","KA","Men",-
+"Varsinais-Suomi constituency","KA","Women",-
+"Varsinais-Suomi constituency","Pirate Pty","Men",30.1
+"Varsinais-Suomi constituency","Pirate Pty","Women",20.0
+"Varsinais-Suomi constituency","SKP","Men",49.1
+"Varsinais-Suomi constituency","SKP","Women",60.7
+"Varsinais-Suomi constituency","KTP","Men",55.5
+"Varsinais-Suomi constituency","KTP","Women",-
+"Varsinais-Suomi constituency","Others","Men",49.0
+"Varsinais-Suomi constituency","Others","Women",-
+"Satakunta constituency","KOK","Men",45.5
+"Satakunta constituency","KOK","Women",44.8
+"Satakunta constituency","SDP","Men",40.0
+"Satakunta constituency","SDP","Women",45.2
+"Satakunta constituency","PS","Men",49.1
+"Satakunta constituency","PS","Women",41.0
+"Satakunta constituency","KESK","Men",54.4
+"Satakunta constituency","KESK","Women",44.8
+"Satakunta constituency","VAS","Men",45.9
+"Satakunta constituency","VAS","Women",57.8
+"Satakunta constituency","VIHR","Men",47.5
+"Satakunta constituency","VIHR","Women",43.5
+"Satakunta constituency","RKP","Men",64.0
+"Satakunta constituency","RKP","Women",65.0
+"Satakunta constituency","KD","Men",48.1
+"Satakunta constituency","KD","Women",46.4
+"Satakunta constituency","STP","Men",65.0
+"Satakunta constituency","STP","Women",-
+"Satakunta constituency","IP","Men",41.6
+"Satakunta constituency","IP","Women",66.3
+"Satakunta constituency","Change2011","Men",48.1
+"Satakunta constituency","Change2011","Women",39.0
+"Satakunta constituency","KA","Men",-
+"Satakunta constituency","KA","Women",-
+"Satakunta constituency","Pirate Pty","Men",29.5
+"Satakunta constituency","Pirate Pty","Women",-
+"Satakunta constituency","SKP","Men",59.0
+"Satakunta constituency","SKP","Women",65.0
+"Satakunta constituency","KTP","Men",61.5
+"Satakunta constituency","KTP","Women",-
+"Satakunta constituency","Others","Men",-
+"Satakunta constituency","Others","Women",-
+"Häme constituency","KOK","Men",46.3
+"Häme constituency","KOK","Women",41.5
+"Häme constituency","SDP","Men",41.4
+"Häme constituency","SDP","Women",42.6
+"Häme constituency","PS","Men",50.9
+"Häme constituency","PS","Women",45.7
+"Häme constituency","KESK","Men",49.8
+"Häme constituency","KESK","Women",47.3
+"Häme constituency","VAS","Men",43.9
+"Häme constituency","VAS","Women",40.1
+"Häme constituency","VIHR","Men",51.2
+"Häme constituency","VIHR","Women",41.8
+"Häme constituency","RKP","Men",-
+"Häme constituency","RKP","Women",-
+"Häme constituency","KD","Men",51.6
+"Häme constituency","KD","Women",56.0
+"Häme constituency","STP","Men",-
+"Häme constituency","STP","Women",-
+"Häme constituency","IP","Men",49.8
+"Häme constituency","IP","Women",65.3
+"Häme constituency","Change2011","Men",43.7
+"Häme constituency","Change2011","Women",38.0
+"Häme constituency","KA","Men",-
+"Häme constituency","KA","Women",-
+"Häme constituency","Pirate Pty","Men",35.5
+"Häme constituency","Pirate Pty","Women",43.0
+"Häme constituency","SKP","Men",47.0
+"Häme constituency","SKP","Women",57.0
+"Häme constituency","KTP","Men",68.3
+"Häme constituency","KTP","Women",-
+"Häme constituency","Others","Men",-
+"Häme constituency","Others","Women",-
+"Pirkanmaa constituency","KOK","Men",45.5
+"Pirkanmaa constituency","KOK","Women",42.6
+"Pirkanmaa constituency","SDP","Men",47.3
+"Pirkanmaa constituency","SDP","Women",41.9
+"Pirkanmaa constituency","PS","Men",45.6
+"Pirkanmaa constituency","PS","Women",44.0
+"Pirkanmaa constituency","KESK","Men",48.3
+"Pirkanmaa constituency","KESK","Women",47.0
+"Pirkanmaa constituency","VAS","Men",46.2
+"Pirkanmaa constituency","VAS","Women",46.5
+"Pirkanmaa constituency","VIHR","Men",40.5
+"Pirkanmaa constituency","VIHR","Women",41.5
+"Pirkanmaa constituency","RKP","Men",-
+"Pirkanmaa constituency","RKP","Women",-
+"Pirkanmaa constituency","KD","Men",49.2
+"Pirkanmaa constituency","KD","Women",49.8
+"Pirkanmaa constituency","STP","Men",63.0
+"Pirkanmaa constituency","STP","Women",-
+"Pirkanmaa constituency","IP","Men",42.6
+"Pirkanmaa constituency","IP","Women",34.3
+"Pirkanmaa constituency","Change2011","Men",34.3
+"Pirkanmaa constituency","Change2011","Women",-
+"Pirkanmaa constituency","KA","Men",-
+"Pirkanmaa constituency","KA","Women",-
+"Pirkanmaa constituency","Pirate Pty","Men",33.2
+"Pirkanmaa constituency","Pirate Pty","Women",32.5
+"Pirkanmaa constituency","SKP","Men",36.6
+"Pirkanmaa constituency","SKP","Women",47.6
+"Pirkanmaa constituency","KTP","Men",62.5
+"Pirkanmaa constituency","KTP","Women",-
+"Pirkanmaa constituency","Others","Men",67.5
+"Pirkanmaa constituency","Others","Women",60.4
+"Southeast Finlands constituency","KOK","Men",42.1
+"Southeast Finlands constituency","KOK","Women",41.3
+"Southeast Finlands constituency","SDP","Men",45.4
+"Southeast Finlands constituency","SDP","Women",43.7
+"Southeast Finlands constituency","PS","Men",52.0
+"Southeast Finlands constituency","PS","Women",40.0
+"Southeast Finlands constituency","KESK","Men",45.3
+"Southeast Finlands constituency","KESK","Women",39.7
+"Southeast Finlands constituency","VAS","Men",44.2
+"Southeast Finlands constituency","VAS","Women",40.2
+"Southeast Finlands constituency","VIHR","Men",33.3
+"Southeast Finlands constituency","VIHR","Women",39.9
+"Southeast Finlands constituency","RKP","Men",59.0
+"Southeast Finlands constituency","RKP","Women",64.0
+"Southeast Finlands constituency","KD","Men",50.0
+"Southeast Finlands constituency","KD","Women",45.9
+"Southeast Finlands constituency","STP","Men",-
+"Southeast Finlands constituency","STP","Women",79.0
+"Southeast Finlands constituency","IP","Men",55.4
+"Southeast Finlands constituency","IP","Women",38.0
+"Southeast Finlands constituency","Change2011","Men",50.0
+"Southeast Finlands constituency","Change2011","Women",50.0
+"Southeast Finlands constituency","KA","Men",-
+"Southeast Finlands constituency","KA","Women",-
+"Southeast Finlands constituency","Pirate Pty","Men",32.4
+"Southeast Finlands constituency","Pirate Pty","Women",-
+"Southeast Finlands constituency","SKP","Men",66.6
+"Southeast Finlands constituency","SKP","Women",-
+"Southeast Finlands constituency","KTP","Men",43.0
+"Southeast Finlands constituency","KTP","Women",57.0
+"Southeast Finlands constituency","Others","Men",-
+"Southeast Finlands constituency","Others","Women",37.0
+"Savo Karelia constituency","KOK","Men",45.0
+"Savo Karelia constituency","KOK","Women",43.8
+"Savo Karelia constituency","SDP","Men",49.5
+"Savo Karelia constituency","SDP","Women",48.1
+"Savo Karelia constituency","PS","Men",51.4
+"Savo Karelia constituency","PS","Women",43.8
+"Savo Karelia constituency","KESK","Men",53.3
+"Savo Karelia constituency","KESK","Women",47.0
+"Savo Karelia constituency","VAS","Men",47.4
+"Savo Karelia constituency","VAS","Women",50.0
+"Savo Karelia constituency","VIHR","Men",41.4
+"Savo Karelia constituency","VIHR","Women",39.8
+"Savo Karelia constituency","RKP","Men",-
+"Savo Karelia constituency","RKP","Women",-
+"Savo Karelia constituency","KD","Men",51.1
+"Savo Karelia constituency","KD","Women",46.2
+"Savo Karelia constituency","STP","Men",63.0
+"Savo Karelia constituency","STP","Women",-
+"Savo Karelia constituency","IP","Men",50.6
+"Savo Karelia constituency","IP","Women",65.0
+"Savo Karelia constituency","Change2011","Men",47.7
+"Savo Karelia constituency","Change2011","Women",-
+"Savo Karelia constituency","KA","Men",-
+"Savo Karelia constituency","KA","Women",-
+"Savo Karelia constituency","Pirate Pty","Men",34.0
+"Savo Karelia constituency","Pirate Pty","Women",-
+"Savo Karelia constituency","SKP","Men",45.0
+"Savo Karelia constituency","SKP","Women",45.5
+"Savo Karelia constituency","KTP","Men",66.0
+"Savo Karelia constituency","KTP","Women",-
+"Savo Karelia constituency","Others","Men",-
+"Savo Karelia constituency","Others","Women",-
+"Vaasa constituency","KOK","Men",49.0
+"Vaasa constituency","KOK","Women",50.6
+"Vaasa constituency","SDP","Men",44.5
+"Vaasa constituency","SDP","Women",41.5
+"Vaasa constituency","PS","Men",43.4
+"Vaasa constituency","PS","Women",55.6
+"Vaasa constituency","KESK","Men",46.7
+"Vaasa constituency","KESK","Women",44.0
+"Vaasa constituency","VAS","Men",41.3
+"Vaasa constituency","VAS","Women",41.3
+"Vaasa constituency","VIHR","Men",40.2
+"Vaasa constituency","VIHR","Women",33.0
+"Vaasa constituency","RKP","Men",45.8
+"Vaasa constituency","RKP","Women",43.6
+"Vaasa constituency","KD","Men",54.7
+"Vaasa constituency","KD","Women",49.0
+"Vaasa constituency","STP","Men",57.0
+"Vaasa constituency","STP","Women",-
+"Vaasa constituency","IP","Men",45.9
+"Vaasa constituency","IP","Women",64.3
+"Vaasa constituency","Change2011","Men",69.5
+"Vaasa constituency","Change2011","Women",54.0
+"Vaasa constituency","KA","Men",-
+"Vaasa constituency","KA","Women",-
+"Vaasa constituency","Pirate Pty","Men",29.0
+"Vaasa constituency","Pirate Pty","Women",26.0
+"Vaasa constituency","SKP","Men",64.0
+"Vaasa constituency","SKP","Women",57.0
+"Vaasa constituency","KTP","Men",57.0
+"Vaasa constituency","KTP","Women",-
+"Vaasa constituency","Others","Men",36.0
+"Vaasa constituency","Others","Women",-
+"Central Finland constituency","KOK","Men",42.3
+"Central Finland constituency","KOK","Women",42.3
+"Central Finland constituency","SDP","Men",50.0
+"Central Finland constituency","SDP","Women",37.1
+"Central Finland constituency","PS","Men",52.4
+"Central Finland constituency","PS","Women",45.4
+"Central Finland constituency","KESK","Men",43.1
+"Central Finland constituency","KESK","Women",48.6
+"Central Finland constituency","VAS","Men",45.9
+"Central Finland constituency","VAS","Women",41.4
+"Central Finland constituency","VIHR","Men",41.2
+"Central Finland constituency","VIHR","Women",38.8
+"Central Finland constituency","RKP","Men",-
+"Central Finland constituency","RKP","Women",-
+"Central Finland constituency","KD","Men",49.0
+"Central Finland constituency","KD","Women",43.5
+"Central Finland constituency","STP","Men",28.0
+"Central Finland constituency","STP","Women",-
+"Central Finland constituency","IP","Men",44.3
+"Central Finland constituency","IP","Women",66.3
+"Central Finland constituency","Change2011","Men",32.0
+"Central Finland constituency","Change2011","Women",-
+"Central Finland constituency","KA","Men",-
+"Central Finland constituency","KA","Women",-
+"Central Finland constituency","Pirate Pty","Men",30.0
+"Central Finland constituency","Pirate Pty","Women",26.0
+"Central Finland constituency","SKP","Men",50.0
+"Central Finland constituency","SKP","Women",44.2
+"Central Finland constituency","KTP","Men",66.0
+"Central Finland constituency","KTP","Women",-
+"Central Finland constituency","Others","Men",47.0
+"Central Finland constituency","Others","Women",-
+"Oulu constituency","KOK","Men",51.1
+"Oulu constituency","KOK","Women",45.0
+"Oulu constituency","SDP","Men",42.9
+"Oulu constituency","SDP","Women",43.7
+"Oulu constituency","PS","Men",47.7
+"Oulu constituency","PS","Women",46.2
+"Oulu constituency","KESK","Men",47.7
+"Oulu constituency","KESK","Women",45.3
+"Oulu constituency","VAS","Men",41.4
+"Oulu constituency","VAS","Women",41.6
+"Oulu constituency","VIHR","Men",42.0
+"Oulu constituency","VIHR","Women",46.1
+"Oulu constituency","RKP","Men",45.9
+"Oulu constituency","RKP","Women",46.7
+"Oulu constituency","KD","Men",55.5
+"Oulu constituency","KD","Women",54.2
+"Oulu constituency","STP","Men",-
+"Oulu constituency","STP","Women",-
+"Oulu constituency","IP","Men",37.8
+"Oulu constituency","IP","Women",47.0
+"Oulu constituency","Change2011","Men",48.1
+"Oulu constituency","Change2011","Women",-
+"Oulu constituency","KA","Men",-
+"Oulu constituency","KA","Women",-
+"Oulu constituency","Pirate Pty","Men",32.7
+"Oulu constituency","Pirate Pty","Women",25.0
+"Oulu constituency","SKP","Men",42.8
+"Oulu constituency","SKP","Women",53.0
+"Oulu constituency","KTP","Men",59.0
+"Oulu constituency","KTP","Women",-
+"Oulu constituency","Others","Men",-
+"Oulu constituency","Others","Women",-
+"Lapland constituency","KOK","Men",49.3
+"Lapland constituency","KOK","Women",48.9
+"Lapland constituency","SDP","Men",46.3
+"Lapland constituency","SDP","Women",39.5
+"Lapland constituency","PS","Men",53.4
+"Lapland constituency","PS","Women",50.4
+"Lapland constituency","KESK","Men",48.1
+"Lapland constituency","KESK","Women",42.2
+"Lapland constituency","VAS","Men",49.1
+"Lapland constituency","VAS","Women",41.7
+"Lapland constituency","VIHR","Men",43.0
+"Lapland constituency","VIHR","Women",44.5
+"Lapland constituency","RKP","Men",26.5
+"Lapland constituency","RKP","Women",35.5
+"Lapland constituency","KD","Men",45.0
+"Lapland constituency","KD","Women",-
+"Lapland constituency","STP","Men",-
+"Lapland constituency","STP","Women",-
+"Lapland constituency","IP","Men",39.2
+"Lapland constituency","IP","Women",-
+"Lapland constituency","Change2011","Men",38.0
+"Lapland constituency","Change2011","Women",63.0
+"Lapland constituency","KA","Men",-
+"Lapland constituency","KA","Women",-
+"Lapland constituency","Pirate Pty","Men",36.4
+"Lapland constituency","Pirate Pty","Women",-
+"Lapland constituency","SKP","Men",59.8
+"Lapland constituency","SKP","Women",53.3
+"Lapland constituency","KTP","Men",68.5
+"Lapland constituency","KTP","Women",-
+"Lapland constituency","Others","Men",-
+"Lapland constituency","Others","Women",-
+"Region of Åland constituency","KOK","Men",-
+"Region of Åland constituency","KOK","Women",-
+"Region of Åland constituency","SDP","Men",-
+"Region of Åland constituency","SDP","Women",-
+"Region of Åland constituency","PS","Men",-
+"Region of Åland constituency","PS","Women",-
+"Region of Åland constituency","KESK","Men",-
+"Region of Åland constituency","KESK","Women",-
+"Region of Åland constituency","VAS","Men",-
+"Region of Åland constituency","VAS","Women",-
+"Region of Åland constituency","VIHR","Men",-
+"Region of Åland constituency","VIHR","Women",-
+"Region of Åland constituency","RKP","Men",-
+"Region of Åland constituency","RKP","Women",-
+"Region of Åland constituency","KD","Men",-
+"Region of Åland constituency","KD","Women",-
+"Region of Åland constituency","STP","Men",-
+"Region of Åland constituency","STP","Women",-
+"Region of Åland constituency","IP","Men",-
+"Region of Åland constituency","IP","Women",-
+"Region of Åland constituency","Change2011","Men",-
+"Region of Åland constituency","Change2011","Women",-
+"Region of Åland constituency","KA","Men",-
+"Region of Åland constituency","KA","Women",-
+"Region of Åland constituency","Pirate Pty","Men",-
+"Region of Åland constituency","Pirate Pty","Women",-
+"Region of Åland constituency","SKP","Men",-
+"Region of Åland constituency","SKP","Women",-
+"Region of Åland constituency","KTP","Men",-
+"Region of Åland constituency","KTP","Women",-
+"Region of Åland constituency","Others","Men",35.0
+"Region of Åland constituency","Others","Women",42.8
