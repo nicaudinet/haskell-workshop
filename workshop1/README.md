@@ -1,8 +1,5 @@
 # Outline of workshop 1
 
-- Go to [Exercise.md](Exercise.md)
-
-
 During this 2 hours workshop, we will go through these different steps:
 
 1.  Setting up your working environment:

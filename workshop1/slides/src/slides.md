@@ -22,7 +22,7 @@ Develop a complete Haskell program that converts CSV data to JSON.
 
 ![](images/goal.pdf)
 
-##
+## The Data
 
 ![](images/data.png){ height=90% }
 
@@ -54,13 +54,13 @@ Develop a complete Haskell program that converts CSV data to JSON.
 * To build a project: `stack build`
 * To access the REPL: `stack repl`
 
-![Basic repl](images/basic-repl.png)
+![](images/basic-repl.png)
 
 # Hello Syntax
 
 ## Playing with the REPL
 
-* Useful tool to try things out parts of your program
+* Useful tool to try out parts of your program
 * Extensively used in the workshop
 
 <!-- Live REPL Coding
@@ -145,7 +145,7 @@ add x y = x + y
 ## Composition
 
 * Using the output of one function as the input of another function: *"chaining functions together"*
-* Use the dot *operator* for composition
+* Use the dot operator for composition
 
 ```haskell
 f :: Int -> String
@@ -167,12 +167,12 @@ h = g . f
 ## Goal
 
 * Create a data structure that accurately models the data
-* Introduce `Maybe`
-* Introduce lists
+* Introduce Maybe
+* Introduce Lists
 
 ### Approach
 
-* Define a model for a single row of data (a candidate)
+* Define a model for a single row of data (an average candidate)
 * Apply this model to all the rows
 
 ![](images/data-model.pdf)
@@ -233,6 +233,8 @@ data Maybe a = Nothing | Just a
 * `Maybe` is the type being defined
 * `a` is a *type variable* (could be any type)
 * `Nothing, Just` are *both* constructors
+  * `Nothing :: Maybe a`
+  * `Just :: a -> Maybe a`
 
 ## The List Type
 
@@ -645,7 +647,8 @@ main = do
 
 ## Conclusion
 
-* Functions ... functions everywhere
+![](images/functions-everywhere.jpg){ width=50% }
+
 * Types are useful to keep track of functions
 * Abstraction makes things easier to think about
 * Split problem into data model and data transformation
