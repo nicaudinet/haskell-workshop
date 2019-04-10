@@ -24,16 +24,9 @@ stdenv.mkDerivation {
     (texlive.combine {
       inherit (texlive)
       scheme-small
-      #beamer
-      #etoolbox
-      #euenc
-      #fontspec
       framed
       lm-math
       lualatex-math
-      #translator
-      #unicode-math
-      #;
       amsfonts
       amsmath
       babel
