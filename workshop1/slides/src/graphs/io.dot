@@ -1,0 +1,26 @@
+digraph IO {
+  size = "15,30";
+  rankdir = LR;
+  worldIn [ shape = none; label = "" ];
+  worldOut [ shape = none; label = "" ];
+  subgraph cluster_program {
+    label = "Program (impure)"
+    style = dashed
+    read [ shape = box; label = "Input\n(readFile)" ];
+    write [ shape = box; label = "Output\n(writeFile)" ];
+    subgraph cluster_dataModel {
+      label = "Core Logic (pure)"
+      style = solid
+      node [ shape = box ] 
+      input [ label = "CSV" ];
+      dataModel [ label = "Data Model" ];
+      output [ label = "JSON" ];
+      input -> dataModel;
+      dataModel -> output;
+    }
+    read -> input;
+    output -> write;
+  }
+  worldIn -> read;
+  write -> worldOut;
+}

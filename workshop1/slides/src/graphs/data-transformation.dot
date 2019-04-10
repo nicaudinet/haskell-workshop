@@ -1,0 +1,13 @@
+digraph dataTransformation {
+  size = "10,5";
+  node [ shape = box ] 
+
+  input [ label = "CSV\n(input)" ];
+  dataModel [ label = "List of\nCandidates" ];
+  output [ label = "JSON\n(output)" ];
+
+  input -> dataModel [ label = "parse" ];
+  dataModel -> output [ label = "encode" ];
+
+  { rank=same; input dataModel output }
+}

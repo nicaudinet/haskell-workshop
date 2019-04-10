@@ -1,0 +1,13 @@
+digraph goal {
+  size = "10,5";
+  node [ shape = box ] 
+
+  input [ label = "CSV\n(input)" ];
+  dataModel [ fontsize = 30; label = "?" ];
+  output [ label = "JSON\n(output)" ];
+
+  input -> dataModel;
+  dataModel -> output;
+
+  { rank=same; input dataModel output }
+}
