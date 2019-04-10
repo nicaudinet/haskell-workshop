@@ -1,5 +1,5 @@
 ---
-title: "Haskell WorkShop"
+title: "Haskell Workshop"
 subtitle: "Writing your first Haskell programm"
 author: "Nicolas Audinet"
 institute: "RELEX Solutions Dev Day"
@@ -33,6 +33,7 @@ Develop a complete Haskell program that converts CSV data to JSON.
 3) The Data Model
 4) Data Transformation
 5) Connecting to the Outside
+6) Conclusion
 
 # The Haskell Development Environment
 
@@ -72,7 +73,7 @@ Develop a complete Haskell program that converts CSV data to JSON.
 ## Hello World
 
 * Open src/Main.hs
-* Run in the REPL by typing `main`
+* Run in the REPL by typing `:main`
 
 ```haskell
 main :: IO ()
@@ -84,10 +85,13 @@ main = putStrLn "Hello World!"
   - No arguments
   - Performs an IO action
 
+* Change the text and run it in the REPL
+
 ## Functions and Types
 
 * The primary way of defining computation is with **functions**
 * **Types** describe the inputs and outputs of functions
+* Types are **enforced** by the compiler
 * Working with two languages at once :)
 
 ```haskell
@@ -101,6 +105,8 @@ addInt :: Int -> Int -> Int
 addInt x y = x + y
 ```
 
+Add these ^ to a file and try them out!
+
 ## A First Function
 
 * A function that converts (some) integers to words
@@ -113,6 +119,8 @@ intToWord 2 = "two"
 intToWord 3 = "three"
 intToWord _ = "dunno"
 ```
+
+* Try and write `wordToInt :: String -> Int`
 
 ## Polymorphic Types
 
@@ -137,14 +145,14 @@ add x y = x + y
 ## Composition
 
 * Using the output of one function as the input of another function: *"chaining functions together"*
-* Use the dot operator for composition
+* Use the dot *operator* for composition
 
 ```haskell
-f :: Int -> Int
-f x = x + 1
+f :: Int -> String
+f x = intToWord x
 
-g :: Int -> Int
-g x = x * 2
+g :: String -> Int
+g x = wordToInt x
 
 h :: Int -> Int
 h = g . f
@@ -203,7 +211,7 @@ data Person = MakePerson
 * Creating a new data type:
 
 ```haskell
-MakePerson :: String -> String -> Person
+MakePerson :: String -> Int -> Person
 ```
 * Accessing the data type:
 
@@ -216,7 +224,7 @@ age :: Person -> Int
 ## The Maybe Type
 
 * What happens if we cannot parse a candidate?
-* Need some way to represent the failure case:
+* Need some way to represent an invalid row:
 
 ```haskell
 data Maybe a = Nothing | Just a
@@ -238,7 +246,17 @@ data Maybe a = Nothing | Just a
 
 ## The Data Model
 
-* Define our basic candidate type:
+* Define our basic candidate type
+
+```haskell
+data Candidate = Candidate
+  { ...
+  } deriving Show
+```
+
+## The Data Model
+
+* Define our basic candidate type
 
 ```haskell
 data Candidate = Candidate
@@ -249,8 +267,88 @@ data Candidate = Candidate
   } deriving Show
 ```
 
-* Add a notion of failure: `Maybe Candidate`
-* Create a list of candidates: `[Maybe Candidate]`
+## The Data Model
+
+* Define our basic candidate type
+
+```haskell
+data Candidate = Candidate
+  { constituency :: String
+  , party        :: String
+  , sex          :: String
+  , averageAge   :: Double
+  } deriving Show
+```
+
+* Add a notion of failure
+
+## The Data Model
+
+* Define our basic candidate type
+
+```haskell
+data Candidate = Candidate
+  { constituency :: String
+  , party        :: String
+  , sex          :: String
+  , averageAge   :: Double
+  } deriving Show
+```
+
+* Add a notion of failure
+
+```haskell
+type DataModel = Maybe Candidate
+```
+
+## The Data Model
+
+* Define our basic candidate type
+
+```haskell
+data Candidate = Candidate
+  { constituency :: String
+  , party        :: String
+  , sex          :: String
+  , averageAge   :: Double
+  } deriving Show
+```
+
+* Add a notion of failure
+
+```haskell
+type DataModel = Maybe Candidate
+```
+
+* Create a list of candidates
+
+## The Data Model
+
+* Define our basic candidate type
+
+```haskell
+data Candidate = Candidate
+  { constituency :: String
+  , party        :: String
+  , sex          :: String
+  , averageAge   :: Double
+  } deriving Show
+```
+
+* Add a notion of failure
+
+```haskell
+type DataModel = Maybe Candidate
+```
+
+* Create a list of candidates
+
+```haskell
+type DataModel = [Maybe Candidate]
+```
+
+
+
 
 # Data Transformation
 
@@ -264,37 +362,64 @@ data Candidate = Candidate
 
 ### Approach
 
-* Write a function `parseLine :: CSV -> Candidate`
-* Generate a function `encode :: Candidate -> JSON`
+* Write a function `parseLine :: CSVLine -> Maybe Candidate`
+* Write a function `parseFile :: CSV -> DataModel`
+* Generate a function `encode :: DataModel -> JSON`
 * Apply these to every row
 
 ![](images/data-transformation.pdf)
 
-## Writing `parseLine :: CSV -> Candidate`
+
+## Writing `parseLine :: CSVLine -> Maybe Candidate`
 
 ```haskell
-parseLine :: String -> Maybe Candidate
-parseLine line =
-  case splitOn ',' line of
-    [c, p, s, a] ->
-      case readMaybe a of
-        Nothing -> Nothing
-        Just a' -> Candidate c p s a'
-    _ -> Nothing
+type CSVLine = String -- type alias
+
+parseLine :: CSVLine -> Maybe Candidate
+parseLine line = makeCandidate (undefined)
+
+makeCandidate :: [String] -> Maybe Candidate
+makeCandidate fields = undefined
+
+fromMaybeAge
+  :: (Double -> Candidate)
+  -> Maybe Double
+  -> Maybe Candidate
+fromMaybeAge partialCandidate maybeAge = undefined
 ```
 
-* Use case statement to pattern match on possible outcomes
 * `_` means "for every other value"
 * `splitOn` splits a string into a list of strings on a character
 * `readMaybe` decodes a double from a string (may fail)
 
-ps: there's an error in the code above, try and find it!
+
+## Writing `parseLine :: CSVLine -> Maybe Candidate`
+
+Our solution:
+
+```haskell
+parseLine :: CSVLine -> Maybe Candidate
+parseLine line = makeCandidate (splitOn ',' line)
+
+makeCandidate :: [String] -> Maybe Candidate
+makeCandidate [c, p, s, a] =
+  fromMaybeAge (Candidate c p s) (readMaybe a)
+makeCandidate _ = Nothing
+
+fromMaybeAge
+  :: (Double -> Candidate)
+  -> Maybe Double
+  -> Maybe Candidate
+fromMaybeAge partialCandidate Nothing  = Nothing
+fromMaybeAge partialCandidate (Just a) = Just (partialCandidate a)
+```
+
 
 ## Stripping Quotes
 
 ```haskell
 stripQ :: String -> String
-stripQ = leftStrip . rightStrip
+stripQ = undefined
   where
     leftStrip :: String -> String
     leftStrip ('"' : xs) = xs
@@ -304,63 +429,55 @@ stripQ = leftStrip . rightStrip
     rightStrip = undefined
 ```
 
-- Use `leftStrip` and `reverse` to implement `rightStrip`
-* A string is literally a list of characters (`Char`)
+* Use `leftStrip` and `reverse` to implement `rightStrip`
+* Use `leftStrip` and `rightStrip` to implement `stripQ`
+* `reverse` reverses items in a list
 * `where` used to define local functions
-* Point-free style
-* composition FTW!
 
-## parseLine v2
+## Stripping Quotes
 
-* Using `stripQ` to improve `parseLine`
-
+Our solution:
 ```haskell
-parseLine :: String -> Maybe Candidate
-parseLine line =
-  case splitOn ',' line of
-    [c, p, s, a] ->
-      case readMaybe a of
-        Nothing -> Nothing
-        Just a' ->
-          let c' = stripQ c
-              p' = stripQ p
-              s' = stripQ s
-          in Just (Candidate c' p' s' a')
-    _ -> Nothing
+stripQ :: String -> String
+stripQ = leftStrip . rightStrip
+  where
+    leftStrip :: String -> String
+    leftStrip ('"' : xs) = xs
+    leftStrip xs         = xs
+
+    rightStrip :: String -> String
+    rightStrip = reverse . leftStrip . reverse
 ```
 
-## Generating `encode :: Candidate -> JSON`
+* Point-free style: composition FTW!
+
+## Improving `parseLine`
+
+* Using `stripQ` to improve `makeCandidate`
 
 ```haskell
-{-# LANGUAGE DeriveGeneric #-}
-main Main where
+...
 
-import qualified Data.Aeson      as JSON
-import qualified Data.ByteString as B
+makeCandidate :: [String] -> Maybe Candidate
+makeCandidate [c, p, s, a] =
+  let c' = stripQ c
+      p' = stripQ p
+      s' = stripQ s
+  in fromMaybeAge (Candidate c' p' s') (readMaybe a)
+makeCandidate _ = Nothing
 
-data Candidate =
-  ...
-  deriving (Show, Generic)
-
-instance JSON.ToJSON Candidate
+...
 ```
 
-* Language extensions expand the Haskell language
-* `Data.Aeson` provides encoding to and from JSON
-* `Data.ByteString` provides efficient binary strings
-* Ta-da! We can use JSON.encode now
+* `let ... in ...` binding useful to split up functions
 
-## Using `JSON.encode`
-
-* Try it out in the REPL!
-
-![](images/encoding.png)
 
 ## The `map` function
 
 * How do we apply `parseLine` to every row?
 * Use `map`, a *higher-order function*
-* Takes a function and a list as input and applies the function to every item in the list
+  * Takes two inputs: a function and a list.
+  * Applies the function to every item in the list
 
 ```haskell
 map :: (a -> b) -> [a] -> [b]
@@ -369,20 +486,65 @@ map f (x:xs) = f x : map f xs
 ```
 
 * Defined using *recursion*
-* Can apply `parseLine` to structures of type `[String]`
 
-## The Full Parser
+
+## Writing `parseFile :: CSV -> DataModel`
 
 * We are ready to write the full parser function:
-* `lines` splits strings into lines
-* `tail` removes the first item in a list
 
 ```haskell
-parseFile :: String -> [Maybe Candidate]
+type CSV = String
+type DataModel = [Maybe Candidate]
+
+parseFile :: CSV -> DataModel
+parseFile = undefined
+```
+
+* `lines` splits strings into lines
+* `tail` removes the first item in a list
+* Try and use point-free style
+
+## Writing `parseFile :: CSV -> DataModel`
+
+Our solution:
+
+```haskell
+parseFile :: CSV -> DataModel
 parseFile = map parseLine . tail . lines
 ```
 
-* We don't have to write this for encoding
+
+## Generating `encode :: DataModel -> JSON`
+
+```haskell
+{-# LANGUAGE DeriveGeneric #-}
+main Main where
+
+import           GHC.Generics
+import qualified Data.Aeson      as JSON
+import qualified Data.ByteString as B
+
+data Candidate = Candidate
+  { ...
+  } deriving (Show, Generic)
+
+instance Aeson.ToJSON Candidate
+```
+
+* Language extensions expand the Haskell language
+* `Data.Aeson` provides encoding to and from JSON
+* `Data.ByteString` provides efficient binary strings
+
+## Generating `encode :: DataModel -> JSON`
+
+```haskell
+type JSON = ByteString
+```
+
+* `encode` outputs efficient binary strings
+* Try it out in the REPL!
+
+![](images/encoding.png)
 
 # Connecting to the Outside
 
@@ -396,6 +558,8 @@ parseFile = map parseLine . tail . lines
 * Introduce purity and impurity
 * Write main function
 
+![](images/connecting.pdf)
+
 ## Purity in Haskell
 
 * All functions we have written in the previous section are *pure*
@@ -408,20 +572,85 @@ parseFile = map parseLine . tail . lines
 * Pure functions cannot interact with the world
 * So how do we communicate with the outside world?
 
-## IO and do notation
+
+## IO
 
 * Communication with the outside handled through IO
-* Impurity is always explicitly encoded in the types
+* Impurity is **always** explicitly encoded in the types
 
 ![](images/io.pdf){ width=100% }
 
+
+## Do notation
+
+```haskell
+askName :: IO ()
+askName = do
+  putStrLn "Enter your name:"
+  name <- getLine
+  let reversedName = reverse name
+  putStrLn ("Your name reversed: " ++ reversedName)
+```
+
+* `putStrLn` prints a string
+* `getLine` gets a line of input from the user
+* Do blocks are a special Haskell syntax impure programming
+  * Always start with the `do` keyword
+  * Functions executed top-to-bottom
+  * Return values stored in local variables using `(<-)`
+  * `let` used for pure computation
+
+
 ## Read / Write
 
+```haskell
+convert :: String -> IO ()
+convert filename = do
+  undefined
+```
+
+* `readFile` returns the contents of a file as a String
+* `B.writeFile` writes a ByteString to a file
+
+## Read / Write
+
+Our Solution:
+
+```haskell
+convert :: String -> IO
+convert filename = do
+  csv <- readFile filename
+  let json = JSON.encode (parseFile csv)
+  B.writeFile "output.json" json
+```
+
+
 ## The Complete App
+
+* Get the filename from the arguments:
+
+```haskell
+main :: IO ()
+main = do
+  args <- getArgs
+  case args of
+    [filename] -> convert filename
+    _          -> putStrLn "Call only with filename"
+```
+
+* And we have a complete Haskell app!! :D 
+
 
 # Conclusion
 
 ## Conclusion
+
+* Functions ... functions everywhere
+* Types are useful to keep track of functions
+* Abstraction makes things easier to think about
+* Split problem into data model and data transformation
+* Keep core logic pure, minimize IO and impurity
+
 
 ## Challenges
 

@@ -6,7 +6,7 @@ digraph IO {
   subgraph cluster_program {
     label = "Program (impure)"
     style = dashed
-    read [ shape = box; label = "Input\n(readFile)" ];
+    read  [ shape = box; label = "Input\n(readFile)" ];
     write [ shape = box; label = "Output\n(writeFile)" ];
     subgraph cluster_dataModel {
       label = "Core Logic (pure)"

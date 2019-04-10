@@ -1,0 +1,18 @@
+digraph connectingOutside {
+  size = "15,30";
+  rankdir = LR;
+  read  [ fontsize = 30; shape = none; label = "?" ];
+  write [ fontsize = 30; shape = none; label = "?" ];
+  subgraph cluster_dataModel {
+    label = "Core Logic"
+    style = solid
+    node [ shape = box ] 
+    input [ label = "CSV" ];
+    dataModel [ label = "Data Model" ];
+    output [ label = "JSON" ];
+    input -> dataModel;
+    dataModel -> output;
+  }
+  read -> input;
+  output -> write;
+}
