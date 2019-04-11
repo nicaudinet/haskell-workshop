@@ -677,7 +677,15 @@ main = do
 
 ## Further Reading
 
+* [Syntax and basics: Learn You A Haskell](http://learnyouahaskell.com/chapters)
+* [Great set of exercises: FP Course](https://github.com/data61/fp-course)
+* [The Haskell Book](http://haskellbook.com/)
+* [School of Haskell](https://www.schoolofhaskell.com/)
+* [More](https://github.com/bitemyapp/learnhaskell)
+
+And ask questions on the Haskell flow!
+
+
 ##
 
-![](images/thats-all-folks.png)
-
+**THAT'S ALL FOLKS!**
