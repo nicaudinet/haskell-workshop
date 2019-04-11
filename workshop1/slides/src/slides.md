@@ -4,8 +4,6 @@ subtitle: "Writing your first Haskell programm"
 author: "Nicolas Audinet"
 institute: "RELEX Solutions Dev Day"
 date: 2019-04-12
-#background-image: src/solarized-mountains.png
-#background-image: vector/relex-logo-black-rgb.pdf
 titlegraphic: vector/relex-logo-black-rgb.pdf
 classoption: "aspectratio=169"
 classoption: "13pt"
@@ -81,9 +79,9 @@ main = putStrLn "Hello World!"
 ```
 
 * `main` is special:
-  - Present in every Haskell program
-  - No arguments
-  - Performs an IO action
+  - Present in every Haskell executable
+  - No function arguments
+  - Entry point for all IO action
 
 * Change the text and run it in the REPL
 
@@ -92,7 +90,6 @@ main = putStrLn "Hello World!"
 * The primary way of defining computation is with **functions**
 * **Types** describe the inputs and outputs of functions
 * Types are **enforced** by the compiler
-* Working with two languages at once :)
 
 ```haskell
 identity :: Int -> Int
@@ -120,6 +117,7 @@ intToWord 3 = "three"
 intToWord _ = "dunno"
 ```
 
+* `_` means "for every other value"
 * Try and write `wordToInt :: String -> Int`
 
 ## Polymorphic Types
@@ -142,10 +140,14 @@ add x y = x + y
 
 * These constraints can be defined using *type classes*
 
+<!-- Mentioned again when dealing with JSON -->
+
+
 ## Composition
 
 * Using the output of one function as the input of another function: *"chaining functions together"*
 * Use the dot operator for composition
+* $h(x) = g(f(x)) => f \circ g$
 
 ```haskell
 f :: Int -> String
@@ -177,6 +179,7 @@ h = g . f
 
 ![](images/data-model.pdf)
 
+
 ## A Single Candidate
 
 ![](images/small-data.png)
@@ -188,6 +191,7 @@ h = g . f
   - average age
 
 * Need a way of grouping these together
+
 
 ## Data Types
 
@@ -206,6 +210,7 @@ data Person = MakePerson
 * `deriving Show` allows the use of the `show` function
   * `show` converts structure to a string
 
+
 ## Working with Data Types
 
 * Creating a new data type:
@@ -220,6 +225,7 @@ name :: Person -> String
 age :: Person -> Int
 ```
 ![](images/simple-datatype.png)
+
 
 ## The Maybe Type
 
@@ -236,15 +242,17 @@ data Maybe a = Nothing | Just a
   * `Nothing :: Maybe a`
   * `Just :: a -> Maybe a`
 
+
 ## The List Type
 
 * How do we represent a list of candidates?
 * Use singly-linked lists:
-  * `[]` is the empty list
+  * `[]` is the empty list <!-- special syntax -->
   * `:` lets you append values to the front
   * `[a,b,c]` == `(a : b : c : [])`
 
 ![](images/list.png){ height=40% }
+
 
 ## The Data Model
 
@@ -255,6 +263,13 @@ data Candidate = Candidate
   { ...
   } deriving Show
 ```
+
+```haskell
+"Constituency","Party","Sex","Average age"
+"Helsinki constituency","KOK","Men",47.6
+```
+
+<!-- Stop at this slide to let them figure it out -->
 
 ## The Data Model
 
@@ -378,7 +393,7 @@ type DataModel = [Maybe Candidate]
 type CSVLine = String -- type alias
 
 parseLine :: CSVLine -> Maybe Candidate
-parseLine line = makeCandidate (undefined)
+parseLine line = makeCandidate undefined
 
 makeCandidate :: [String] -> Maybe Candidate
 makeCandidate fields = undefined
@@ -390,9 +405,9 @@ fromMaybeAge
 fromMaybeAge partialCandidate maybeAge = undefined
 ```
 
-* `_` means "for every other value"
-* `splitOn` splits a string into a list of strings on a character
-* `readMaybe` decodes a double from a string (may fail)
+*Hint:* `Data.List.Split.splitOn` splits a list on the specified character
+
+*Hint:* `readMaybe` decodes a double from a string (may fail)
 
 
 ## Writing `parseLine :: CSVLine -> Maybe Candidate`
@@ -462,16 +477,15 @@ stripQ = leftStrip . rightStrip
 
 makeCandidate :: [String] -> Maybe Candidate
 makeCandidate [c, p, s, a] =
-  let c' = stripQ c
-      p' = stripQ p
-      s' = stripQ s
-  in fromMaybeAge (Candidate c' p' s') (readMaybe a)
+  fromMaybeAge (Candidate c' p' s') (readMaybe a)
+  where
+    c' = stripQ c
+    p' = stripQ p
+    s' = stripQ s
 makeCandidate _ = Nothing
 
 ...
 ```
-
-* `let ... in ...` binding useful to split up functions
 
 
 ## The `map` function
@@ -502,8 +516,8 @@ parseFile :: CSV -> DataModel
 parseFile = undefined
 ```
 
-* `lines` splits strings into lines
-* `tail` removes the first item in a list
+<!-- * `lines` splits strings into lines -->
+<!-- * `tail` removes the first item in a list -->
 * Try and use point-free style
 
 ## Writing `parseFile :: CSV -> DataModel`
@@ -523,8 +537,8 @@ parseFile = map parseLine . tail . lines
 main Main where
 
 import           GHC.Generics
-import qualified Data.Aeson      as JSON
-import qualified Data.ByteString as B
+import qualified Data.Aeson           as JSON
+import qualified Data.ByteString.Lazy as B
 
 data Candidate = Candidate
   { ...
@@ -535,7 +549,7 @@ instance Aeson.ToJSON Candidate
 
 * Language extensions expand the Haskell language
 * `Data.Aeson` provides encoding to and from JSON
-* `Data.ByteString` provides efficient binary strings
+* `Data.ByteString.Lazy` provides efficient binary strings
 
 ## Generating `encode :: DataModel -> JSON`
 
@@ -662,3 +676,4 @@ main = do
 ##
 
 ![](images/thats-all-folks.png)
+
