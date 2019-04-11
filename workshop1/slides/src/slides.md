@@ -147,7 +147,7 @@ add x y = x + y
 
 * Using the output of one function as the input of another function: *"chaining functions together"*
 * Use the dot operator for composition
-* $h(x) = g(f(x)) => f \circ g$
+* $h(x) = g(f(x)) => g \circ f$
 
 ```haskell
 f :: Int -> String
@@ -206,6 +206,7 @@ data Person = MakePerson
 
 * `Person` is the type being defined
 * `MakePerson` is the constructor function
+  * Usually the same as the type
 * `name, age` are fields with associated types
 * `deriving Show` allows the use of the `show` function
   * `show` converts structure to a string
@@ -381,7 +382,7 @@ type DataModel = [Maybe Candidate]
 
 * Write a function `parseLine :: CSVLine -> Maybe Candidate`
 * Write a function `parseFile :: CSV -> DataModel`
-* Generate a function `encode :: DataModel -> JSON`
+* Specialise a function `encode :: DataModel -> JSONByteString`
 * Apply these to every row
 
 ![](images/data-transformation.pdf)
@@ -405,9 +406,10 @@ fromMaybeAge
 fromMaybeAge partialCandidate maybeAge = undefined
 ```
 
-*Hint:* `Data.List.Split.splitOn` splits a list on the specified character
+*Hints:*
 
-*Hint:* `readMaybe` decodes a double from a string (may fail)
+* `Data.List.Split.splitOn` splits a list on the specified character
+* `readMaybe` decodes a double from a string (may fail)
 
 
 ## Writing `parseLine :: CSVLine -> Maybe Candidate`
@@ -445,6 +447,8 @@ stripQ = undefined
     rightStrip :: String -> String
     rightStrip = undefined
 ```
+
+*Hints:*
 
 * Use `leftStrip` and `reverse` to implement `rightStrip`
 * Use `leftStrip` and `rightStrip` to implement `stripQ`
@@ -530,7 +534,7 @@ parseFile = map parseLine . tail . lines
 ```
 
 
-## Generating `encode :: DataModel -> JSON`
+## Specializing `encode :: DataModel -> JSONByteString`
 
 ```haskell
 {-# LANGUAGE DeriveGeneric #-}
@@ -551,10 +555,10 @@ instance Aeson.ToJSON Candidate
 * `Data.Aeson` provides encoding to and from JSON
 * `Data.ByteString.Lazy` provides efficient binary strings
 
-## Generating `encode :: DataModel -> JSON`
+## Specializing `encode :: DataModel -> JSONByteString`
 
 ```haskell
-type JSON = ByteString
+type JSONByteString = ByteString
 ```
 
 * `encode` outputs efficient binary strings
